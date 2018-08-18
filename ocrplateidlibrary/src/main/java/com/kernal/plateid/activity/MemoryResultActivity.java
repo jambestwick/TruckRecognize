@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Looper;
 import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kernal.plateid.R;
 import com.kernal.plateid.model.bean.Result;
@@ -52,6 +54,7 @@ public class MemoryResultActivity extends Activity{
 	private static final String PATH = Environment
 			.getExternalStorageDirectory().toString() + "/DCIM/Camera/";
 	private File file;
+	private Intent intent;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -199,10 +202,10 @@ public class MemoryResultActivity extends Activity{
 								if (null != result) {
 									Log.e(TAG, "result="+result.toString());
 									if (result.getRetCode() == 200) {
-										Intent intent=new Intent(MemoryResultActivity.this, TruckInspectionActivity.class);
+										intent=new Intent(MemoryResultActivity.this, TruckInspectionActivity.class);
 										intent.putExtra("result_data",result);
-										MFGT.startActivity(MemoryResultActivity.this, intent);
 										upLoadPic();
+
 									} else {
 										Log.e(TAG, "进入提示代码处");
 										showAlert("料车状态异常提醒","当前料车未处于待验收状态请现场核查");
@@ -237,14 +240,19 @@ public class MemoryResultActivity extends Activity{
 		client.newCall(request).enqueue(new Callback() {
 			@Override
 			public void onFailure(Call call, IOException e) {
-
 				Log.e(TAG, "e=" + e);
+				Toast.makeText(MemoryResultActivity.this, "图片上传失败", Toast.LENGTH_LONG).show();
+				showRegMsg("图片上传失败");
+				MFGT.startActivity(MemoryResultActivity.this, intent);
 			}
 
 			@Override
 			public void onResponse(Call call, Response response) throws IOException {
 				Log.e(TAG, "图片上传成功");
 				file.delete();
+				showRegMsg("图片上传成功");
+				MFGT.startActivity(MemoryResultActivity.this, intent);
+
 
 			}
 		});
@@ -253,6 +261,16 @@ public class MemoryResultActivity extends Activity{
 
 
 	}
+
+	private void showRegMsg(final String msg) {
+		runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(MemoryResultActivity.this, msg, Toast.LENGTH_LONG).show();
+            }
+        });
+	}
+
 	private void showAlert(String title,String msg) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(MemoryResultActivity.this);
 		builder.setTitle(title)
