@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_truck_inspection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kernal.plateid.activity.TruckInspectionActivity">
+
+    <TextView
+        android:id="@+id/alert_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="已成功验收，5S后自动跳转！"
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        />
+    <!--验收失败，请单击返回按钮重新提交验收-->
+
+    <TextView
+        android:id="@+id/time_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:textColor="@color/red"
+        android:text="5s"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="160dp"
+        android:layout_marginTop="38dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/red"
+        android:textSize="20dp"
+        android:text="返回"/>
+
+
+</RelativeLayout>

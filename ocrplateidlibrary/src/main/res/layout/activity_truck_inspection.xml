@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_truck_inspection"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.kernal.plateid.activity.TruckInspectionActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="料车验收核查信息"
+        android:textSize="25dp"
+        android:textColor="@color/red"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/truck_title_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="料车型号："
+            android:textSize="15dp"
+            android:textColor="@color/red"
+            />
+        <TextView
+
+            android:id="@+id/truck_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="15dp"
+            android:text="解放牌汽车"
+
+            />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/truck_weight_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="料车载重量："
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                />
+            <TextView
+
+                android:id="@+id/truck_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="15dp"
+                android:text="50吨"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/truck_card_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车牌号码："
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                />
+            <TextView
+
+                android:id="@+id/truck_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="15dp"
+                android:text="冀RGZ567"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/truck_time_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="入场时间："
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                />
+            <TextView
+
+                android:id="@+id/truck_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="15dp"
+                android:text="2018-04-26 10:04:26"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/truck_status_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前状态："
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                />
+            <TextView
+                android:id="@+id/truck_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="15dp"
+                android:text="待验收状态"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/truck_operatorid_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作员ID："
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                />
+            <TextView
+                android:id="@+id/truck_operatorid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="15dp"
+                android:text="20120441031030"
+
+                />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:text="确认"
+            />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:layout_marginLeft="80dp"
+            android:text="取消"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

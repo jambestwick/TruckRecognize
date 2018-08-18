@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:appcompat-v7:25.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:recyclerview-v7:25.+'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okio:okio:1.10.0'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile files('src/main/jniLibs/android_auth.jar')
+    compile files('src/main/jniLibs/bcprov-ext-jdk15-146.jar')
+    compile files('src/main/jniLibs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+    compile files('src/main/jniLibs/pki.jar')
+    compile files('src/main/jniLibs/plate_id_sdk.jar')
+    compile files('src/main/jniLibs/android-support-v4.jar')
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    apt 'com.jakewharton:butterknife-compiler:8.6.0'
+
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile 'com.android.support:appcompat-v7:26.+'
+//    testCompile 'junit:junit:4.12'
+//    compile files('src/main/jniLibs/android_auth.jar')
+//    compile files('src/main/jniLibs/bcprov-ext-jdk15-146.jar')
+//    compile files('src/main/jniLibs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+//    compile files('src/main/jniLibs/pki.jar')
+//    compile files('src/main/jniLibs/plate_id_sdk.jar')
+//    compile files('src/main/jniLibs/android-support-v4.jar')
+//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile 'com.android.support:recyclerview-v7:26.+'
+//    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+//    compile 'com.squareup.okio:okio:1.10.0'
+//    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+//    compile 'com.google.code.gson:gson:2.7'
+//    compile 'com.jakewharton:butterknife:8.4.0'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/black2</color>
+    <color name="colorPrimaryDark">@color/black2</color>
+    <color name="colorAccent">@color/tab_def_selected_color</color>
+    <color name="windows_color">#F5F5F5</color>
+
+    <color name="line_color">#dbdbdb</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black2">#232325</color>
+    <color name="black3">#ffeeeeee</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#347ce9</color>
+    <color name="gray">#9A9A9A</color>
+    <color name="red">#FC2828</color>
+    <color name="tab_bg">#ff7800</color>
+    <color name="text_hint">#353535</color>
+    <color name="text_color_hint">#DDDDDD</color>
+    <color name="text_wenti">#7d96cc</color>
+
+    <!-- tab -->
+    <color name="tab_bottom_bg_color">#fc1e2327</color>
+    <color name="tab_def_normal_color">#A0B9CD</color>
+    <color name="tab_def_selected_color">@color/tab_bg</color>
+    <color name="tab_top_title_normal_color">@color/white</color>
+    <color name="tab_top_title_selected_color">@color/tab_bg</color>
+
+    <color name="bottom_bar_taobao_bg">#F9F7F4</color>
+    <color name="bottom_bar_normal_bg_top">#C0BFBF</color>
+    <drawable name="menu_item_normal">#6A7077</drawable>
+    <drawable name="menu_item_pressed">#FF7A49</drawable>
+    <drawable name="menu_item_selected">#FF7A49</drawable>
+    <color name="menu_item_normal">#6A7077</color>
+    <color name="menu_item_pressed">#FF7A49</color>
+    <color name="menu_item_selected">#FF7A49</color>
+    <color name="fragment_bg">#EFEFEF</color>
+    <color name="item_good_text">#313131</color>
+    <color name="item_good_price">#df3131</color>
+    <color name="list_background">#EFEFEF</color>
+    <color name="good_detail_title_bg">#FF5300</color>
+    <color name="good_detail_bg">#F2F2F2</color>
+    <color name="good_detail_bg_white">#FFFFFF</color>
+    <color name="good_detail_currency_price">#CC2E2E</color>
+    <color name="good_detaul_flow_indicator_focus">#FF5300</color>
+    <color name="cart_buy_bg">#FF8000</color>
+    <color name="list_item_title">#ED6F73</color>
+    <color name="list_item_name">#131313</color>
+    <color name="list_item_des">#DCDCDC</color>
+    <color name="personal_center_top_bg">#FF5000</color>
+    <color name="bg_gray_light">#EEEEEE</color>
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+    <color name="bluebg">#007edf</color>
+    <color name="greybg">#EEEEEE</color>
+    <color name="fontgrey">#999999</color>
+    <color name="main_orange">#FF6C2C</color>
+</resources>

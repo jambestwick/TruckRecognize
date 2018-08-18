@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/list_background" >
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_bar_taobao_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/select_button"
+            android:drawableTop="@drawable/selector_menu_item_new_good"
+            style="@style/menu_item_style"
+            android:text="所有车辆"
+            android:button="@null"
+            android:textColor="@color/main_botton_text_color"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/layout_boutique"
+            android:drawableTop="@drawable/selector_menu_item_boutique"
+            style="@style/menu_item_style"
+            android:text="待验收车辆"
+            android:button="@null"
+            android:textColor="@color/main_botton_text_color"
+            android:checked="false"/>
+        <RadioButton
+            android:id="@+id/layout_category"
+            android:drawableTop="@drawable/selector_menu_item_category"
+            style="@style/menu_item_style"
+            android:text="已登记车辆"
+            android:button="@null"
+            android:textColor="@color/main_botton_text_color"
+            android:checked="false"/>
+        <RadioButton
+            android:id="@+id/layout_personal_center"
+            android:drawableTop="@drawable/selector_menu_item_personal_center"
+            style="@style/menu_item_style"
+            android:text="员工信息"
+            android:textColor="@color/main_botton_text_color"
+            android:button="@null"
+            android:checked="false"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/vline"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/main_bottom"
+        android:background="#D6DCDC"  />
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_above="@id/vline" />
+
+</RelativeLayout>
