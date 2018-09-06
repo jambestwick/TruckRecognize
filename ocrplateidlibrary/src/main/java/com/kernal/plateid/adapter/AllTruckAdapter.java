@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.kernal.plateid.R;
-import com.kernal.plateid.application.FuLiCenterApplication;
+import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.model.bean.Employee;
 import com.kernal.plateid.model.bean.Truck;
 
@@ -28,7 +28,7 @@ public class AllTruckAdapter extends RecyclerView.Adapter {
     public AllTruckAdapter(List<Truck> allTrucks, Context context) {
         this.allTrucks = allTrucks;
         this.context = context;
-        this.employee= FuLiCenterApplication.getUser();
+        this.employee= CardScanApplication.getUser();
     }
 
     @Override

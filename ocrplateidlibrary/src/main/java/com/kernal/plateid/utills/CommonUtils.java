@@ -2,7 +2,7 @@ package com.kernal.plateid.utills;
 
 import android.widget.Toast;
 
-import static com.kernal.plateid.application.FuLiCenterApplication.getInstance;
+import static com.kernal.plateid.application.CardScanApplication.getInstance;
 
 
 public class CommonUtils {

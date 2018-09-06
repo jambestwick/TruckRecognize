@@ -6,12 +6,7 @@ import android.os.Message;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
-import com.kernal.plateid.application.FuLiCenterApplication;
+import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.model.bean.Result;
 
 import java.io.File;
@@ -19,7 +14,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Type;
 import java.net.FileNameMap;
 import java.net.URLConnection;
 import java.net.URLEncoder;
@@ -150,7 +144,7 @@ public class OkHttpUtils<T> {
 
 
     private void initHandler() {
-        mHandler = new Handler(FuLiCenterApplication.getInstance().getMainLooper()) {
+        mHandler = new Handler(CardScanApplication.getInstance().getMainLooper()) {
             @Override
             public void handleMessage(Message msg) {
                 switch (msg.what) {

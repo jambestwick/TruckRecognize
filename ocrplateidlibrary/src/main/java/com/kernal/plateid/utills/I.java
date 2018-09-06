@@ -2,7 +2,7 @@ package com.kernal.plateid.utills;
 
 
 public interface I {
-    String SERVER_ROOT = "http://uequiu" +
+    String SERVER_ROOT = "http://mep2uf" +
             ".natappfree.cc/TestDemo04/";
     /** 下拉刷新*/
 
@@ -63,6 +63,11 @@ public interface I {
     int CART_CHECKED_DEFAULT = 0;
     String DETECT_TRUCKSTATUS = "TruckStatusDetect";
     String TRUCKSTATUS_UPDATE = "SetTruckStatus";
+
+    String DATA_NAME_KEY = "name";
+    String DATA_GENTDER_KEY = "gender";
+    String DATA_CARD_KEY = "card";
+    String DATA_DEPARTMENT_KEY="department";
 
     interface Goods {
         String KEY_RESULT = "result";

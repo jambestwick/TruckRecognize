@@ -10,16 +10,21 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.kernal.plateid.R;
-import com.kernal.plateid.application.FuLiCenterApplication;
+import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.model.bean.Employee;
+import com.kernal.plateid.utills.DataStorageUtil;
+import com.kernal.plateid.utills.I;
 
 
 public class EmployeeMsgFragment extends Fragment {
+
+    private static final String TAG = "EmployeeMsgFragment";
 
     private TextView tvCardNum;
     private TextView tvName;
     private TextView tvDpartment;
     private TextView tvGender;
+    private DataStorageUtil dataInstance;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,12 +36,22 @@ public class EmployeeMsgFragment extends Fragment {
     }
 
     private void initData() {
-        Employee employee = FuLiCenterApplication.getInstance().getUser();
-        Log.e("EmployeeMsgFragment", employee.toString());
-        tvCardNum.setText(employee.getCard_num()+"");
-        tvDpartment.setText(employee.getDepartment());
-        tvGender.setText(employee.getGender());
-        tvName.setText(employee.getName());
+        dataInstance=CardScanApplication.getInstance().getDataInstance();
+        String card_num = dataInstance
+                .getData(I.DATA_CARD_KEY);
+
+        String employ_name = dataInstance.getData(I.DATA_NAME_KEY);
+        Log.e(TAG, "initData: employ_name="+employ_name );
+        String employ_department = dataInstance.getData(I.DATA_DEPARTMENT_KEY);
+
+        String employ_gender = dataInstance.getData(I.DATA_GENTDER_KEY);
+
+
+
+        tvCardNum.setText(card_num);
+        tvDpartment.setText(employ_department);
+        tvGender.setText(employ_gender);
+        tvName.setText(employ_name);
 
     }
 

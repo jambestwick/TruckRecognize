@@ -1,7 +1,7 @@
 package com.kernal.plateid.model.dao;
 
 
-import com.kernal.plateid.application.FuLiCenterApplication;
+import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.model.bean.User;
 
 /**
@@ -20,7 +20,7 @@ public class UserDao {
 
     private static UserDao instance;
     public UserDao() {
-        DBManager.onInit(FuLiCenterApplication.getInstance());
+        DBManager.onInit(CardScanApplication.getInstance());
     }
     public static UserDao getInstance(){
         if (instance==null){

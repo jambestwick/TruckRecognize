@@ -10,7 +10,7 @@ import android.widget.RadioButton;
 
 import com.kernal.plateid.R;
 import com.kernal.plateid.R2;
-import com.kernal.plateid.application.FuLiCenterApplication;
+import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.fragment.AllTruckFragment;
 import com.kernal.plateid.fragment.EmployeeMsgFragment;
 import com.kernal.plateid.fragment.OperateFragment;
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 index = 2;
                 break;
             case R2.id.layout_personal_center:
-                if (FuLiCenterApplication.getUser() == null) {
+                if (CardScanApplication.getInstance().getDataInstance().getData(I.DATA_NAME_KEY) == null) {
                     MFGT.startActivity(MainActivity.this, LoginActivity.class);
                 } else {
                     index = 3;
@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         L.e(TAG, "onResume,currentIndex=" + currentIndex + ",index=" + index
-                + ",user=" + FuLiCenterApplication.getUser());
-        if (index == 4 && FuLiCenterApplication.getUser() == null) {
+                + ",user=" + CardScanApplication.getUser());
+        if (index == 4 && CardScanApplication.getUser() == null) {
             index = 0;
         }
         setFragment();
