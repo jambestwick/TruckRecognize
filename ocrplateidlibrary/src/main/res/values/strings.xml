@@ -206,5 +206,6 @@
     <string name="add_goods_fail">add goods fail</string>
     <string name="order_nothing">order is noting</string>
     <string name="confirm_order">confirm order</string>
+    <string name="applle_creator">com.littlehu.cardscan-2018-@blackfox</string>
 
 </resources>
