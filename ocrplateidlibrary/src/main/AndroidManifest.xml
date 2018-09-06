@@ -35,9 +35,7 @@
         android:name=".application.FuLiCenterApplication"
         android:allowBackup="true"
         android:supportsRtl="true">
-        <activity android:name=".activity.LoginActivity">
-
-        </activity>
+        <activity android:name=".activity.LoginActivity"/>
         <activity
             android:name=".PlateIDCfg"
             android:configChanges="keyboardHidden|orientation">
