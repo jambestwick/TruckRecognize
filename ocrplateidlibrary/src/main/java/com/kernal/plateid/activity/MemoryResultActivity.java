@@ -189,9 +189,6 @@ public class MemoryResultActivity extends Activity{
 
 			@Override
 			public void onClick(View arg0) {
-//				Intent intent  = new Intent("kernal.plateid.MainActivity");
-//				startActivity(intent);
-//				finish();
 				OkHttpUtils<Result> utils = new OkHttpUtils<Result>(MemoryResultActivity.this);
 				utils.setRequestUrl(I.DETECT_TRUCKSTATUS)
 						.addParam("truckNum",truk_num)

@@ -36,11 +36,7 @@
         android:allowBackup="true"
         android:supportsRtl="true">
         <activity android:name=".activity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.main" />
 
-                <category android:name="android.intent.category.default" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".PlateIDCfg"
@@ -54,7 +50,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <service
             android:name=".AuthService"
@@ -73,16 +69,16 @@
 
         <activity
             android:name=".activity.MemoryCameraActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize|navigation"></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize|navigation" />
         <activity
             android:name=".activity.MemoryResultActivity"
             android:configChanges="orientation|keyboard|keyboardHidden"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.ResultActivity"
             android:configChanges="orientation|keyboard|keyboardHidden"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.PermissionActivity"></activity>
+        <activity android:name=".activity.PermissionActivity" />
         <activity
             android:name=".PlateIDBean"
             android:configChanges="keyboardHidden|orientation">
@@ -118,9 +114,16 @@
             android:configChanges="keyboardHidden|orientation" />
         <!-- android:screenOrientation="landscape" -->
 
+        <activity android:name=".activity.TruckInspectionResultActivity" />
+        <activity android:name=".activity.TruckInspectionActivity" />
+        <activity android:name=".activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.main" />
 
-        <activity android:name=".activity.TruckInspectionResultActivity"></activity>
-        <activity android:name=".activity.TruckInspectionActivity"></activity>
+                <category android:name="android.intent.category.default" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

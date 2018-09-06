@@ -2,7 +2,7 @@ package com.kernal.plateid.utills;
 
 
 public interface I {
-    String SERVER_ROOT = "http://7nife6" +
+    String SERVER_ROOT = "http://uequiu" +
             ".natappfree.cc/TestDemo04/";
     /** 下拉刷新*/
 
