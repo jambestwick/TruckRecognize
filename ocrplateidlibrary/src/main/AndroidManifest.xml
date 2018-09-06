@@ -32,9 +32,17 @@
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
 
     <application
-        android:name=".application.FuLiCenterApplication"
+        android:name=".application.CardScanApplication"
         android:allowBackup="true"
         android:supportsRtl="true">
+        <activity android:name=".activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".activity.LoginActivity"/>
         <activity
             android:name=".PlateIDCfg"
@@ -114,14 +122,7 @@
 
         <activity android:name=".activity.TruckInspectionResultActivity" />
         <activity android:name=".activity.TruckInspectionActivity" />
-        <activity android:name=".activity.WelcomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.main" />
 
-                <category android:name="android.intent.category.default" />
-            </intent-filter>
-
-        </activity>
     </application>
 
 </manifest>

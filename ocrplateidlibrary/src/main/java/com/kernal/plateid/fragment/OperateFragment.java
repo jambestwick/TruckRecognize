@@ -17,7 +17,7 @@ import com.kernal.plateid.R;
 import com.kernal.plateid.R2;
 import com.kernal.plateid.activity.MemoryCameraActivity;
 import com.kernal.plateid.activity.PermissionActivity;
-import com.kernal.plateid.application.FuLiCenterApplication;
+import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.model.bean.Truck;
 import com.kernal.plateid.model.net.IModelUser;
 import com.kernal.plateid.model.net.ModelUser;
@@ -71,7 +71,7 @@ public class OperateFragment extends Fragment implements View.OnClickListener{
 
     private void addToRemote(Truck truck) {
         IModelUser modelUser=new ModelUser();
-        String employeeId= FuLiCenterApplication.getUser().getId()+"";
+        String employeeId= CardScanApplication.getUser().getId()+"";
         modelUser.insertIntoRemote(getActivity(), truck.getStatus()+"", truck.getTruk_card(), employeeId, new OnCompleteListener<String>() {
             @Override
             public void onSuccess(String result) {
