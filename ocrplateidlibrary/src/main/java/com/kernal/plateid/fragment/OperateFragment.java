@@ -88,7 +88,7 @@ public class OperateFragment extends Fragment implements View.OnClickListener{
     }
 
     private void initView(View view) {
-        rvAddTruckMsg = (RelativeLayout) view.findViewById(R.id.addNewTruck);
+        rvAddTruckMsg = (RelativeLayout) view.findViewById(R.id.truck_confirm);
         rvStartRecognize = (RelativeLayout) view.findViewById(R.id.rvGetInRecognize);
         rvgGetTaggedTruck = (RelativeLayout) view.findViewById(R.id.rvTaggedTruck);
     }
@@ -96,7 +96,7 @@ public class OperateFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R2.id.addNewTruck:
+            case R2.id.truck_confirm:
 
                 break;
 

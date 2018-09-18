@@ -67,7 +67,7 @@
         />
 
     <RelativeLayout
-        android:id="@+id/addNewTruck"
+        android:id="@+id/truck_confirm"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center_vertical"
@@ -76,7 +76,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="添加新的料车"
+            android:text="料车确认"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
             />
@@ -89,6 +89,7 @@
 
 
     </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

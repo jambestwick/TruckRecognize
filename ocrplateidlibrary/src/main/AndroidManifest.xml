@@ -36,14 +36,10 @@
         android:allowBackup="true"
         android:supportsRtl="true">
         <activity android:name=".activity.WelcomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
-        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.LoginActivity" />
         <activity
             android:name=".PlateIDCfg"
             android:configChanges="keyboardHidden|orientation">
@@ -56,7 +52,11 @@
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+
+
+
+        </activity>
 
         <service
             android:name=".AuthService"
@@ -122,7 +122,13 @@
 
         <activity android:name=".activity.TruckInspectionResultActivity" />
         <activity android:name=".activity.TruckInspectionActivity" />
+        <activity android:name=".activity.TruckConfirmActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
