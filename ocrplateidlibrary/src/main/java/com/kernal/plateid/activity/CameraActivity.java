@@ -74,7 +74,7 @@ public class CameraActivity extends Activity implements SurfaceHolder.Callback {
 	private int width, height;
 	private boolean hasFlashLigth = false;
 	private long fastClick = 0;
-	private ImageButton backImage, restartImage, takeImage, recogImage, lightOn, lightOff;
+	private ImageButton backImage, restartImage, takeImage	, recogImage, lightOn, lightOff;
 	private TextView backAndRestartText, takeAndRecogText, lightText;
 	private ImageView leftImage, rightImage;
 	private boolean taking = false;

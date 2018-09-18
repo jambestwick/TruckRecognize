@@ -2,11 +2,12 @@ package com.kernal.plateid.utills;
 
 
 public interface I {
-    String SERVER_ROOT = "http://mep2uf" +
-            ".natappfree.cc/TestDemo04/";
+//    String SERVER_ROOT = "http://mep2uf" +
+//            ".natappfree.cc/TestDemo04/";
     /** 下拉刷新*/
 
-//    String SERVER_ROOT ="http://localhost:8080/TestDemo04/";
+    String SERVER_ROOT ="http://10.0.2.2:8080/TestDemo04/";
+
     int ACTION_DOWNLOAD=0;
     /** 第一次下载*/
     int ACTION_PULL_DOWN=1;
