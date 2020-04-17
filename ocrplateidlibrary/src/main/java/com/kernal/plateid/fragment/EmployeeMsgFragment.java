@@ -2,7 +2,6 @@ package com.kernal.plateid.fragment;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +13,8 @@ import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.model.bean.Employee;
 import com.kernal.plateid.utills.DataStorageUtil;
 import com.kernal.plateid.utills.I;
+
+import androidx.fragment.app.Fragment;
 
 
 public class EmployeeMsgFragment extends Fragment {

@@ -3,7 +3,6 @@ package com.kernal.plateid.activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +12,8 @@ import com.kernal.plateid.model.bean.Result;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TruckInspectionResultActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView tv_alert,tv_time;

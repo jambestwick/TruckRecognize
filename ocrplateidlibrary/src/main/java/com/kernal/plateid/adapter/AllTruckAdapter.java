@@ -1,7 +1,6 @@
 package com.kernal.plateid.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,8 @@ import com.kernal.plateid.model.bean.Employee;
 import com.kernal.plateid.model.bean.Truck;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**

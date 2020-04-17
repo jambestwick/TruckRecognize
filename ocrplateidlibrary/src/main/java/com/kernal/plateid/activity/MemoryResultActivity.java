@@ -7,8 +7,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Looper;
-import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +28,7 @@ import com.kernal.plateid.utills.OkHttpUtils;
 import java.io.File;
 import java.io.IOException;
 
+import androidx.appcompat.app.AlertDialog;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;

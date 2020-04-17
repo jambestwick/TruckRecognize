@@ -1,14 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
-apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -19,54 +18,38 @@ android {
         }
     }
 
-    splits {
-        abi {
-            enable true
-            reset()
-            include 'x86', 'armeabi-v7a'
-            universalApk true
-        }
-    }
+
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'armeabi-v7a'
+//            universalApk true
+//        }
+//    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile 'com.android.support:appcompat-v7:25.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:recyclerview-v7:25.+'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-    compile 'com.squareup.okio:okio:1.10.0'
-    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
-    compile 'com.google.code.gson:gson:2.7'
-    compile files('src/main/jniLibs/android_auth.jar')
-    compile files('src/main/jniLibs/bcprov-ext-jdk15-146.jar')
-    compile files('src/main/jniLibs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
-    compile files('src/main/jniLibs/pki.jar')
-    compile files('src/main/jniLibs/plate_id_sdk.jar')
-    compile files('src/main/jniLibs/android-support-v4.jar')
-    testCompile 'junit:junit:4.12'
-    compile 'com.jakewharton:butterknife:8.6.0'
-    apt 'com.jakewharton:butterknife-compiler:8.6.0'
-
-//    compile fileTree(dir: 'libs', include: ['*.jar'])
-//    compile 'com.android.support:appcompat-v7:26.+'
-//    testCompile 'junit:junit:4.12'
-//    compile files('src/main/jniLibs/android_auth.jar')
-//    compile files('src/main/jniLibs/bcprov-ext-jdk15-146.jar')
-//    compile files('src/main/jniLibs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
-//    compile files('src/main/jniLibs/pki.jar')
-//    compile files('src/main/jniLibs/plate_id_sdk.jar')
-//    compile files('src/main/jniLibs/android-support-v4.jar')
-//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-//    compile 'com.android.support:recyclerview-v7:26.+'
-//    compile 'com.squareup.okhttp3:okhttp:3.4.1'
-//    compile 'com.squareup.okio:okio:1.10.0'
-//    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
-//    compile 'com.google.code.gson:gson:2.7'
-//    compile 'com.jakewharton:butterknife:8.4.0'
-//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    api 'com.squareup.okhttp3:okhttp:3.9.0'
+    api 'com.squareup.okio:okio:1.13.0'
+    api 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+    api 'com.google.code.gson:gson:2.8.2'
+    api files('src/main/jniLibs/android_auth.jar')
+    api files('src/main/jniLibs/bcprov-ext-jdk15-146.jar')
+    api files('src/main/jniLibs/ksoap2-android-assembly-2.4-jar-with-dependencies.jar')
+    api files('src/main/jniLibs/pki.jar')
+    api files('src/main/jniLibs/plate_id_sdk.jar')
+// https://mvnrepository.com/artifact/androidx.appcompat/appcompat
+    implementation group: 'androidx.appcompat', name: 'appcompat', version: '1.1.0'
+    // https://mvnrepository.com/artifact/androidx.recyclerview/recyclerview
+    implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.1.0'
+    testImplementation 'junit:junit:4.12'
+    // https://mvnrepository.com/artifact/com.jakewharton/butterknife
+    api 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 }

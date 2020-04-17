@@ -2,15 +2,11 @@ package com.kernal.plateid.activity;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-import com.kernal.plateid.R;
 import com.kernal.plateid.R2;
 import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.model.bean.Employee;
@@ -19,11 +15,12 @@ import com.kernal.plateid.model.net.IModelUser;
 import com.kernal.plateid.model.net.ModelUser;
 import com.kernal.plateid.model.net.OnCompleteListener;
 import com.kernal.plateid.utills.CommonUtils;
-import com.kernal.plateid.utills.DataStorageUtil;
 import com.kernal.plateid.utills.I;
 import com.kernal.plateid.utills.MFGT;
 import com.kernal.plateid.utills.ResultUtils;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -44,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R2.layout.activity_login);
         ButterKnife.bind(this);
 
     }
@@ -83,10 +80,10 @@ public class LoginActivity extends AppCompatActivity {
         String username = mUsername.getText().toString().trim();
         String password = mPassword.getText().toString().trim();
         if(TextUtils.isEmpty(username)){
-            mUsername.setError(getString(R.string.user_name_connot_be_empty));
+            mUsername.setError(getString(R2.string.user_name_connot_be_empty));
             mUsername.requestFocus();
         }else if(TextUtils.isEmpty(password)){
-            mPassword.setError(getString(R.string.password_connot_be_empty));
+            mPassword.setError(getString(R2.string.password_connot_be_empty));
             mPassword.requestFocus();
         }else{
             login(username,password);
@@ -95,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login(String username, String password) {
         final ProgressDialog dialog = new ProgressDialog(this);
-        dialog.setMessage(getString(R.string.logining));
+        dialog.setMessage(getString(R2.string.logining));
         model = new ModelUser();
         model.login(this, username, password, new OnCompleteListener<String>() {
             @Override
@@ -120,17 +117,17 @@ public class LoginActivity extends AppCompatActivity {
 
                         }else{
                             if (resultFromJson.getRetCode() == I.MSG_LOGIN_UNKNOW_USER){
-                                CommonUtils.showLongToast(getString(R.string.login_fail_unknow_user));
+                                CommonUtils.showLongToast(getString(R2.string.login_fail_unknow_user));
                             }
                             if (resultFromJson.getRetCode() == I.MSG_LOGIN_ERROR_PASSWORD){
-                                CommonUtils.showLongToast(getString(R.string.login_fail_error_password));
+                                CommonUtils.showLongToast(getString(R2.string.login_fail_error_password));
                             }
                         }
                     }else{
-                        CommonUtils.showLongToast(getString(R.string.login_fail));
+                        CommonUtils.showLongToast(getString(R2.string.login_fail));
                     }
                 }else{
-                    CommonUtils.showLongToast(getString(R.string.login_fail));
+                    CommonUtils.showLongToast(getString(R2.string.login_fail));
                 }
                 dialog.dismiss();
 

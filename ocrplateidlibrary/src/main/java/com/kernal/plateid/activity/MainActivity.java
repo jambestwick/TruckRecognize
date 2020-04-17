@@ -2,13 +2,9 @@ package com.kernal.plateid.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 
-import com.kernal.plateid.R;
 import com.kernal.plateid.R2;
 import com.kernal.plateid.application.CardScanApplication;
 import com.kernal.plateid.fragment.AllTruckFragment;
@@ -19,6 +15,9 @@ import com.kernal.plateid.utills.I;
 import com.kernal.plateid.utills.L;
 import com.kernal.plateid.utills.MFGT;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainn);
+        setContentView(R2.layout.activity_mainn);
         ButterKnife.bind(this);
 //        ButterKnife.bind(this);
 
@@ -81,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
         mFragments[3] = mEmployeeMsgFragment;
 
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.fragment_container, mAllTruckFragment)
-                .add(R.id.fragment_container, mEmployeeMsgFragment)
-                .add(R.id.fragment_container, mOperateFragment)
+                .add(R2.id.fragment_container, mAllTruckFragment)
+                .add(R2.id.fragment_container, mEmployeeMsgFragment)
+                .add(R2.id.fragment_container, mOperateFragment)
                 .show(mAllTruckFragment)
                 .hide(mEmployeeMsgFragment)
                 .hide(mOperateFragment)
@@ -121,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.hide(mFragments[currentIndex]);
         if (!mFragments[index].isAdded()) {
-            ft.add(R.id.fragment_container, mFragments[index]);
+            ft.add(R2.id.fragment_container, mFragments[index]);
         }
         ft.show(mFragments[index]).commit();
     }

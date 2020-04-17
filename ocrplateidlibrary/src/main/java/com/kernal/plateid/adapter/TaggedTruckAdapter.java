@@ -1,7 +1,8 @@
 package com.kernal.plateid.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by my on 2018/4/24.

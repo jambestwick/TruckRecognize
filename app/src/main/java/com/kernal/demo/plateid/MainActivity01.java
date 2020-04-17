@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
+import com.kernal.plateid.R2;
 import com.kernal.plateid.activity.LoginActivity;
 import com.kernal.plateid.activity.MemoryCameraActivity;
 import com.kernal.plateid.activity.PermissionActivity;
@@ -18,7 +19,7 @@ public class MainActivity01 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainn);
+        setContentView(R2.layout.activity_mainn);
         //这里提供三中跳转方式 用户可根据需求自行选择；
         //跳转到demo主界面
         Intent intent  = new Intent(MainActivity01.this, LoginActivity.class);

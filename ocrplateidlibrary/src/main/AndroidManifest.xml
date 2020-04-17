@@ -52,8 +52,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
-
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
 
 
         </activity>

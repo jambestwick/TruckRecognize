@@ -1,22 +1,25 @@
 
 package com.kernal.plateid.activity;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.provider.Settings;
-import android.support.v4.app.ActivityCompat;
 import android.view.Window;
 import android.widget.Toast;
 
-import com.kernal.plateid.R;
+import com.kernal.plateid.R2;
 import com.kernal.plateid.utills.CheckPermission;
 import com.kernal.plateid.utills.Utils;
 
 import java.io.File;
+
+import androidx.core.app.ActivityCompat;
 
 
 /**
@@ -48,7 +51,7 @@ public class PermissionActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.permission_layout);
+		setContentView(R2.layout.permission_layout);
 		if (getIntent() == null || !getIntent().hasExtra(EXTRA_PERMISSION))// 如果参数不等于配置的权限参数时
 		{
 			throw new RuntimeException(
@@ -110,6 +113,7 @@ public class PermissionActivity extends Activity {
 	}
 
 	// 请求权限去兼容版本
+	@TargetApi(Build.VERSION_CODES.M)
 	private void requestPermissions(String... permission) {
 
 		PermissionActivity.this.requestPermissions(permission,

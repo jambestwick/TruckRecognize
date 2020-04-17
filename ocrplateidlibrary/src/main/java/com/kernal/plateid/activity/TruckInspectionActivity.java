@@ -1,7 +1,6 @@
 package com.kernal.plateid.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.kernal.plateid.R;
-import com.kernal.plateid.R2;
 import com.kernal.plateid.model.bean.Result;
 import com.kernal.plateid.model.bean.Truck;
 import com.kernal.plateid.utills.I;
@@ -19,6 +17,8 @@ import com.kernal.plateid.utills.MFGT;
 import com.kernal.plateid.utills.OkHttpUtils;
 
 import java.io.Serializable;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TruckInspectionActivity extends AppCompatActivity implements View.OnClickListener{
 
